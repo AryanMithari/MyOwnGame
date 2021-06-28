@@ -3,6 +3,7 @@ var END = 0;
 var Over=2;
 var gameState = PLAY;
 
+
 var prince, princeRunning, princeCollided;
 var ground, invisibleGround, groundImage;
 
@@ -15,7 +16,9 @@ var jumpSound , checkPointSound, dieSound
 
 function preload(){
   princeRunning = loadAnimation("image/b1.png","image/b2.png","image/b3.png",'image/b4.png','image/b5.png');
-  princeCollided = loadAnimation("image/1.png",'image/2.png','image/3.png');
+  princeCollided = loadAnimation("image/co6.png","image/co1.png","image/co2.png","image/co3.png",
+	"image/co4.png","image/co5.png","image/co7.png","image/co8.png","image/co9.png",
+	"image/co10.png","image/co11.png","image/co12.png","image/co13.png");
   
   // groundImage = loadImage("ground2.png");
   
@@ -23,18 +26,18 @@ function preload(){
   treeImg= loadImage('image/tree.png')
   bgImg= loadImage('image/bg.png')
   
-  fireImg = loadImage("image/fire.png");
+  fireImg = loadAnimation("image/f1.gif");
   dragonImg=loadAnimation("image/d1.png",'image/d2.png','image/d3.png')
   
   restartImg = loadImage("image/reset.png");
   gameOverImg = loadAnimation("image/over.gif");
   endImage=loadAnimation("image/end.gif");
-  fortImage = loadImage("image/castle.png")
-  lampImg= loadImage("image/lamp.png")
+  fortImage = loadImage("image/fort.png")
+  lampImg= loadImage("image/l1.png")
   jumpSound = loadSound("jump.mp3")
-  dieSound = loadSound("die.mp3")
-  checkPointSound = loadSound("checkPoint.mp3")
-  bgSound= loadSound("sound.mp3")
+  dieSound = loadSound("gameover.mp3")
+  checkPointSound = loadSound("gamend.mp3")
+  bgSound= loadSound("bgm.mp3")
 
 }
 
